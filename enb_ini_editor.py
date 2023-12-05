@@ -5,12 +5,7 @@ def list_file_lines(filepath):
     with open(filepath) as file_object:
         lines = file_object.readlines()
     cleaned_lines = []
-    # BONNIE RECOMMENDATION
-    #cleaned_lines = [line.rstrip("\n") for line in lines if line != "\n"]
-    for line in lines:
-        if line != "\n":
-            cleaned_lines.append(line.rstrip("\n"))
-    return cleaned_lines
+    cleaned_lines = [line.rstrip("\n") for line in lines if line != "\n"]
 
 # Build a list of [SECTIONS] from a list of each line in a file
 def list_sections(file_lines):
